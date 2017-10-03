@@ -1,0 +1,14 @@
+{
+  "name": "api-restful-favoritos",
+  "version": "1.0.0",
+  "description": "Projecto Node Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Rodriguez <davidgr80@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
