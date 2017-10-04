@@ -4,12 +4,17 @@
   "description": "Projecto Node Angular",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Rodriguez <davidgr80@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "mongoose": "^4.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }

@@ -1,18 +1,17 @@
 'use strict'
 
-var express = require('express');
-var bodyParser = require('body-parser');
-
-var app = express();
+var mongoose = require('mongoose');
+var app = require('./app');
 var port = process.env.PORT || 3678;
 
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
-
-app.get('/prueba', function(req, res){
-    res.send({message: "Hola mundo"});
+mongoose.connect('mongodb://localhost:27017/cursofavoritos', {useMongoClient: true}, (err, res) => {
+    if(err){
+        throw err;
+    } else {
+        console.log('Conexion a MongoDB correcta');
+        app.listen(port,function(){
+            console.log('Escuchando en http://localhost:'+port);
+        });
+    }
 })
 
-app.listen(port,function(){
-    console.log('Escuchando en http://localhost:3678');
-});
